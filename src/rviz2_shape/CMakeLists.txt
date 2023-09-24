@@ -44,6 +44,8 @@ install(
 install(
   DIRECTORY
   launch
+  meshes
+  urdf
   DESTINATION
   share/${PROJECT_NAME}
 )
