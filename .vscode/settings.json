@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "random": "cpp",
+        "algorithm": "cpp"
+    },
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ],
+    "ros.distro": "foxy",
+    "cmake.sourceDirectory": "/home/lwx/code/ros2_ws/src/rviz2_shape",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++-9"
+}
