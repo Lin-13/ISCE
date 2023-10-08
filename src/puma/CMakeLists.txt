@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(rviz2_shape)
+project(puma)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -17,14 +17,10 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
-
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
-add_executable(talker src/new_shape.cpp)
-ament_target_dependencies(talker rclcpp std_msgs)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
@@ -36,15 +32,10 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 install(
-  TARGETS
-    talker
-  DESTINATION
-  lib/${PROJECT_NAME}
-)
-install(
   DIRECTORY
   launch
   meshes
+  textures
   urdf
   rviz
   DESTINATION
