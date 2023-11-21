@@ -3,21 +3,21 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="hyper_robot">
+  name="hyper_robot2">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.00058161 9.2027E-05 0.066927"
+        xyz="-0.00080332 -0.0073137 -0.027846"
         rpy="0 0 0" />
       <mass
         value="1.4037" />
       <inertia
-        ixx="0.0017137"
-        ixy="-3.6681E-06"
-        ixz="6.2555E-08"
-        iyy="0.0020234"
-        iyz="-4.9449E-07"
+        ixx="0.0017764"
+        ixy="-3.447E-06"
+        ixz="2.1856E-07"
+        iyy="0.0019607"
+        iyz="2.7013E-07"
         izz="0.0032525" />
     </inertial>
     <visual>
@@ -26,12 +26,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/base_link.STL" />
+          filename="package://hyper_robot2/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.3098 0.3098 0.3098 1" />
+          rgba="1 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/base_link.STL" />
+          filename="package://hyper_robot2/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +48,17 @@
     name="Link1">
     <inertial>
       <origin
-        xyz="-0.030516 0.00022842 0.053377"
+        xyz="0.03091 3.5089E-05 -0.073107"
         rpy="0 0 0" />
       <mass
-        value="0.11358" />
+        value="0.11138" />
       <inertia
-        ixx="2.5955E-05"
-        ixy="-5.1947E-08"
-        ixz="4.402E-07"
-        iyy="1.7784E-05"
-        iyz="-4.0039E-08"
-        izz="1.7387E-05" />
+        ixx="2.6005E-05"
+        ixy="-2.1401E-13"
+        ixz="2.8039E-07"
+        iyy="1.7177E-05"
+        iyz="3.7239E-08"
+        izz="1.71E-05" />
     </inertial>
     <visual>
       <origin
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link1.STL" />
+          filename="package://hyper_robot2/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link1.STL" />
+          filename="package://hyper_robot2/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -88,34 +88,29 @@
     name="Joint0"
     type="continuous">
     <origin
-      xyz="-0.02 0 0"
-      rpy="-3.1416 0 -0.00" />
+      xyz="0.02 0 -0.07755"
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="Link1" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="1"
-      velocity="1" />
   </joint>
   <link
     name="Link2">
     <inertial>
       <origin
-        xyz="0.00069625 0.044662 -0.00055951"
+        xyz="-1.2906E-15 0.044669 -7.8627E-06"
         rpy="0 0 0" />
       <mass
         value="0.089477" />
       <inertia
-        ixx="2.6925E-05"
-        ixy="-1.1777E-07"
-        ixz="3.7328E-08"
-        iyy="1.9361E-05"
-        iyz="2.3344E-09"
+        ixx="2.6927E-05"
+        ixy="2.4785E-19"
+        ixz="-7.0271E-18"
+        iyy="1.9359E-05"
+        iyz="3.7239E-08"
         izz="1.3371E-05" />
     </inertial>
     <visual>
@@ -124,7 +119,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link2.STL" />
+          filename="package://hyper_robot2/meshes/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -138,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link2.STL" />
+          filename="package://hyper_robot2/meshes/Link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -146,34 +141,29 @@
     name="Joint1"
     type="continuous">
     <origin
-      xyz="-0.0465 0 0.08365"
-      rpy="1.5708 -0 0" />
+      xyz="0.0465 0 -0.1031"
+      rpy="-1.5708 0 3.1416" />
     <parent
       link="Link1" />
     <child
       link="Link2" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="1"
-      velocity="1" />
   </joint>
   <link
     name="Link3">
     <inertial>
       <origin
-        xyz="0.015065 0.047482 6.4268E-06"
+        xyz="0.010576 0.048595 3.4505E-05"
         rpy="0 0 0" />
       <mass
         value="0.092872" />
       <inertia
-        ixx="2.0796E-05"
-        ixy="-2.2102E-07"
-        ixz="1.307E-10"
-        iyy="1.7187E-05"
-        iyz="3.6043E-09"
+        ixx="2.0806E-05"
+        ixy="1.9206E-07"
+        ixz="1.1433E-18"
+        iyy="1.7178E-05"
+        iyz="-6.0089E-20"
         izz="2.3283E-05" />
     </inertial>
     <visual>
@@ -182,7 +172,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link3.STL" />
+          filename="package://hyper_robot2/meshes/Link3.STL" />
       </geometry>
       <material
         name="">
@@ -196,7 +186,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link3.STL" />
+          filename="package://hyper_robot2/meshes/Link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -204,35 +194,30 @@
     name="Joint2"
     type="continuous">
     <origin
-      xyz="0.0 0.06364 -0.0"
-      rpy="-0.00 0 0.0" />
+      xyz="0 0.06365 0"
+      rpy="0 0 0" />
     <parent
       link="Link2" />
     <child
       link="Link3" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="1"
-      velocity="1" />
   </joint>
   <link
     name="Link4">
     <inertial>
       <origin
-        xyz="0.0013704 0.016569 -0.081394"
+        xyz="1.1274E-14 0.015686 0.069973"
         rpy="0 0 0" />
       <mass
         value="0.092872" />
       <inertia
         ixx="2.761E-05"
-        ixy="3.8656E-10"
-        ixz="7.2688E-08"
+        ixy="1.2687E-20"
+        ixz="-2.9881E-20"
         iyy="1.7538E-05"
-        iyz="-1.1791E-07"
-        izz="1.6119E-05" />
+        iyz="1.1758E-07"
+        izz="1.6118E-05" />
     </inertial>
     <visual>
       <origin
@@ -240,7 +225,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link4.STL" />
+          filename="package://hyper_robot2/meshes/Link4.STL" />
       </geometry>
       <material
         name="">
@@ -254,7 +239,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link4.STL" />
+          filename="package://hyper_robot2/meshes/Link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -262,34 +247,29 @@
     name="Joint3"
     type="continuous">
     <origin
-      xyz="0.027199 0.025358 0.00080668"
-      rpy="1.5714 1.5714 0.0" />
+      xyz="0.02565 0.031 0"
+      rpy="-1.5708 -1.5708 0" />
     <parent
       link="Link3" />
     <child
       link="Link4" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="1"
-      velocity="1" />
   </joint>
   <link
     name="Link5">
     <inertial>
       <origin
-        xyz="-0.0015613 0.048642 -0.019132"
+        xyz="3.6611E-14 0.048595 -0.026541"
         rpy="0 0 0" />
       <mass
         value="0.092872" />
       <inertia
         ixx="2.761E-05"
-        ixy="-5.856E-12"
-        ixz="2.2863E-10"
+        ixy="4.7957E-21"
+        ixz="-4.0259E-20"
         iyy="1.7178E-05"
-        iyz="-1.919E-07"
+        iyz="-1.9206E-07"
         izz="1.6478E-05" />
     </inertial>
     <visual>
@@ -298,7 +278,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link5.STL" />
+          filename="package://hyper_robot2/meshes/Link5.STL" />
       </geometry>
       <material
         name="">
@@ -312,7 +292,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link5.STL" />
+          filename="package://hyper_robot2/meshes/Link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -320,34 +300,29 @@
     name="Joint4"
     type="continuous">
     <origin
-      xyz="0 0 -0.1062"
-      rpy="-1.5708 0.0 -3.1416" />
+      xyz="0 0 0.09265"
+      rpy="1.5708 0 0" />
     <parent
       link="Link4" />
     <child
       link="Link5" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="1"
-      velocity="1" />
   </joint>
   <link
     name="Link6">
     <inertial>
       <origin
-        xyz="0.0027081 0.0134 0.025257"
+        xyz="3.652E-14 0.012025 0.0262"
         rpy="0 0 0" />
       <mass
         value="0.016021" />
       <inertia
-        ixx="6.121E-06"
-        ixy="-1.1546E-07"
-        ixz="1.0055E-09"
-        iyy="5.3512E-06"
-        iyz="-7.665E-11"
+        ixx="6.138E-06"
+        ixy="6.3821E-22"
+        ixz="2.3592E-21"
+        iyy="5.3342E-06"
+        iyz="1.9145E-21"
         izz="1.8104E-06" />
     </inertial>
     <visual>
@@ -356,7 +331,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link6.STL" />
+          filename="package://hyper_robot2/meshes/Link6.STL" />
       </geometry>
       <material
         name="">
@@ -370,7 +345,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://hyper_robot/meshes/Link6.STL" />
+          filename="package://hyper_robot2/meshes/Link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -378,18 +353,13 @@
     name="Joint5"
     type="continuous">
     <origin
-      xyz="0 0.031993 -0.03165"
-      rpy="-1.5714 0 0" />
+      xyz="0 0.031 -0.04165"
+      rpy="-1.5708 0 0" />
     <parent
       link="Link5" />
     <child
       link="Link6" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="1"
-      velocity="1" />
   </joint>
 </robot>
