@@ -97,9 +97,9 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-1.5707"
-      upper="1.5707"
-      effort="1"
+      lower="-2.3561"
+      upper="2.3561"
+      effort="10"
       velocity="1" />
   </joint>
   <link
@@ -495,7 +495,7 @@
     type="revolute">
     <origin
       xyz="0 0 0"
-      rpy="1.5708 0 2.433" />
+      rpy="1.5708 0 0" />
     <parent
       link="end_effector" />
     <child
@@ -503,8 +503,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-1.5708"
-      upper="1.5708"
+      lower="-3.142857"
+      upper="3.142857"
       effort="1"
       velocity="1" />
   </joint>
@@ -520,8 +520,8 @@
     <axis
       xyz="1 0 0"/>
     <limit
-      lower="-1.5708"
-      upper="1.5708"
+      lower="-0.7854"
+      upper="0.7854"
       effort="1"
       velocity="1" />
   </joint>
@@ -536,8 +536,8 @@
     <axis
       xyz="0 0 1"/>
     <limit
-      lower="-1.5708"
-      upper="1.5708"
+      lower="-0.7854"
+      upper="0.7854"
       effort="1"
       velocity="1" />
   </joint>

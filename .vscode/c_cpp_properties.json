@@ -7,8 +7,9 @@
             },
             "includePath": [
                 "/opt/ros/foxy/include/**",
-                "/home/lwx/code/ros2_ws/src/rviz2_shape/include/**",
-                "/usr/include/**"
+                "/usr/include/**",
+                "${workspaceFolder}/install/servo_msgs/include",
+                "${workspaceFolder}/install/fs_servo/include"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",

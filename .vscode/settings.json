@@ -1,7 +1,12 @@
 {
     "files.associations": {
+        "*.world": "xml",
+        "*.sdf": "xml",
         "random": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "chrono": "cpp",
+        "iostream": "cpp",
+        "thread": "cpp"
     },
     "python.autoComplete.extraPaths": [
         "/opt/ros/foxy/lib/python3.8/site-packages"
@@ -10,7 +15,7 @@
         "/opt/ros/foxy/lib/python3.8/site-packages"
     ],
     "ros.distro": "foxy",
-    "cmake.sourceDirectory": "/home/lwx/code/ros2_ws/src/rviz2_shape",
+    "cmake.sourceDirectory": "/home/lwx/code/ros2_ws/build/px4_msgs/px4_msgs__py",
     "C_Cpp.default.compilerPath": "/usr/bin/g++-9",
     "python.analysis.typeCheckingMode": "basic"
 }
