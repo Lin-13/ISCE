@@ -3,3 +3,6 @@ build
 install
 *.zip
 .vscode
+etc
+dataman
+parameters*
