@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
 
     using namespace std::chrono_literals;
     while(1){
-        commands.data = {0,PI/2,0,0,PI/2};
+        commands.data = {0,PI/2,-PI/2,0,PI/2};
         publisher->publish(commands);
         std::this_thread::sleep_for(10ms);
         rclcpp::spin_some(node);
