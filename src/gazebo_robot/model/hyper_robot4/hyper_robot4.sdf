@@ -3,7 +3,7 @@
     <link name='base_link'>
       <inertial>
         <pose>-0.000803 -0.007314 -0.027846 0 -0 0</pose>
-        <mass>1.4037</mass>
+        <mass>1.4</mass>
         <inertia>
           <ixx>0.0017764</ixx>
           <ixy>-3.447e-06</ixy>
@@ -17,7 +17,7 @@
         <pose>0 0 -0.1 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.6 0.6 0.2</size>
+            <size>0.4 0.4 0.2</size>
           </box>
         </geometry>
       </collision>
@@ -121,7 +121,7 @@
           <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
           <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
@@ -294,11 +294,11 @@
       </visual>
     </link>
     <joint name='rotor_0_joint' type='revolute'>
-      <pose relative_to='base_link'>0.15778 -0.15778 0.022914 -1.5708 0 1.7863</pose>
+      <pose relative_to='base_link'>0.15778 -0.15778 0.022914 0 -0 0</pose>
       <parent>base_link</parent>
       <child>rotor_0</child>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -312,7 +312,7 @@
     <link name='rotor_0'>
       <pose relative_to='rotor_0_joint'>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0 -0.004483 -0 0 -0 0</pose>
+        <pose>0 -0.004483 -0 -1.5708 0 1.7863</pose>
         <mass>0.022944</mass>
         <inertia>
           <ixx>8.117e-07</ixx>
@@ -324,7 +324,7 @@
         </inertia>
       </inertial>
       <visual name='rotor_0_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 -1.5708 0 1.7863</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -334,11 +334,11 @@
       </visual>
     </link>
     <joint name='rotor_1_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.15778 0.15778 0.022914 -1.5708 -0 1.7179</pose>
+      <pose relative_to='base_link'>-0.15778 0.15778 0.022914 0 -0 0</pose>
       <parent>base_link</parent>
       <child>rotor_1</child>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -352,7 +352,7 @@
     <link name='rotor_1'>
       <pose relative_to='rotor_1_joint'>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>-0 -0.004483 0 0 -0 0</pose>
+        <pose>-0 -0.004483 0 -1.5708 -0 1.7179</pose>
         <mass>0.022944</mass>
         <inertia>
           <ixx>8.1171e-07</ixx>
@@ -364,7 +364,7 @@
         </inertia>
       </inertial>
       <visual name='rotor_1_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 -1.5708 -0 1.7179</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -374,11 +374,11 @@
       </visual>
     </link>
     <joint name='rotor_2_joint' type='revolute'>
-      <pose relative_to='base_link'>0.15778 0.15778 0.0245 1.5708 0 0.18169</pose>
+      <pose relative_to='base_link'>0.15778 0.15778 0.0245 0 -0 0</pose>
       <parent>base_link</parent>
       <child>rotor_2</child>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -392,7 +392,7 @@
     <link name='rotor_2'>
       <pose relative_to='rotor_2_joint'>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0 0.0061 0 0 -0 0</pose>
+        <pose>0 0.0061 0 1.5708 0 0.18169</pose>
         <mass>0.022896</mass>
         <inertia>
           <ixx>8.0904e-07</ixx>
@@ -404,7 +404,7 @@
         </inertia>
       </inertial>
       <visual name='rotor_2_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 1.5708 0 0.18169</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -414,11 +414,11 @@
       </visual>
     </link>
     <joint name='rotor_3_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.15778 -0.15778 0.02285 -1.5708 -0 -2.9802</pose>
+      <pose relative_to='base_link'>-0.15778 -0.15778 0.02285 0 -0 0</pose>
       <parent>base_link</parent>
       <child>rotor_3</child>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -432,7 +432,7 @@
     <link name='rotor_3'>
       <pose relative_to='rotor_3_joint'>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0 -0.00455 0 0 -0 0</pose>
+        <pose>0 -0.00455 0 -1.5708 -0 -2.9802</pose>
         <mass>0.022896</mass>
         <inertia>
           <ixx>8.0904e-07</ixx>
@@ -444,7 +444,7 @@
         </inertia>
       </inertial>
       <visual name='rotor_3_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 -1.5708 -0 -2.9802</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -467,8 +467,8 @@
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
       <maxRotVelocity>1100</maxRotVelocity>
-      <motorConstant>5.84e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <motorConstant>10.26e-06</motorConstant>
+      <momentConstant>0.05</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>0</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -484,8 +484,8 @@
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
       <maxRotVelocity>1100</maxRotVelocity>
-      <motorConstant>5.84e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <motorConstant>10.26e-06</motorConstant>
+      <momentConstant>0.05</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>1</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -501,8 +501,8 @@
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
       <maxRotVelocity>1100</maxRotVelocity>
-      <motorConstant>5.84e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <motorConstant>10.26e-06</motorConstant>
+      <momentConstant>0.05</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>2</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
@@ -518,8 +518,8 @@
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
       <maxRotVelocity>1100</maxRotVelocity>
-      <motorConstant>5.84e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <motorConstant>10.26e-06</motorConstant>
+      <momentConstant>0.05</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>3</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>

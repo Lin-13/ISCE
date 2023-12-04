@@ -39,7 +39,7 @@ int main(int argc, char * argv[])
     while(1){
         commands.data = {0,PI/2,-PI/2,0,PI/2};
         publisher->publish(commands);
-        std::this_thread::sleep_for(10ms);
+        std::this_thread::sleep_for(50ms);
         rclcpp::spin_some(node);
     }
 

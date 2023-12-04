@@ -44,17 +44,22 @@ import xacro
 def generate_launch_description():
     model_name = "hyper_robot4"
     world_name = "empty"
-    gz_lib = LaunchConfiguration("gz_lib",default="--verbose")
+    gazebo_robot_path = os.path.join(
+        get_package_share_directory('gazebo_robot'))
+    world_path = os.path.join(gazebo_robot_path,
+                              'world',
+                              world_name + '.world')
+    gz_extra = LaunchConfiguration("gz_extra",default="--verbose")
+    gz_world = LaunchConfiguration("gz_world",default=world_path)
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('gazebo_ros'), 'launch'), 
                                                '/gazebo.launch.py']),
-                launch_arguments={"extra_gazebo_args":gz_lib}.items()
+                launch_arguments={"extra_gazebo_args":gz_extra,
+                                  "world":gz_world}.items()
              )
-    gazebo_ros2_control_demos_path = os.path.join(
-        get_package_share_directory('gazebo_robot'))
 
-    xacro_file = os.path.join(gazebo_ros2_control_demos_path,
+    xacro_file = os.path.join(gazebo_robot_path,
                               'model',
                               model_name,
                               model_name + '.xacro.urdf')
