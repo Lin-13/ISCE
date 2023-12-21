@@ -24,3 +24,4 @@ joint_position_controller:
     state_interfaces:
       - position
       - velocity
+      - effort

@@ -35,13 +35,6 @@
       </material>
     </visual>
     <collision>
-      <!-- <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://hyper_robot4/meshes/base_link.STL" />
-      </geometry> -->
       <origin xyz="0 0 -0.1" rpy="0 0 0" />
         <geometry>
           <box size="0.4 0.4 0.2" />
@@ -58,6 +51,8 @@
         <ode>0.5</ode>
       </friction>
     </surface>
+    <gravity>1</gravity>
+    <velocity_decay/>
   </link>
   <link
     name="Link1">
@@ -89,15 +84,6 @@
           rgba="0.69804 0.69804 0.69804 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://hyper_robot4/meshes/Link1.STL" />
-      </geometry>
-    </collision> -->
   </link>
   <joint
     name="Joint0"
@@ -116,7 +102,7 @@
       upper="1.5707"
       effort="1"
       velocity="1" />
-    <dynamics damping="0.01" friction="0.01"/>
+    <dynamics damping="0.01" friction="0.0"/>
   </joint>
   <link
     name="Link2">
@@ -148,15 +134,6 @@
           rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://hyper_robot4/meshes/Link2.STL" />
-      </geometry>
-    </collision> -->
   </link>
   <joint
     name="Joint1"
@@ -175,7 +152,7 @@
       upper="1.5707"
       effort="1"
       velocity="1" />
-    <dynamics damping="0.01" friction="0.01"/>
+    <dynamics damping="0.01" friction="0.0"/>
   </joint>
   <link
     name="Link3">
@@ -207,15 +184,6 @@
           rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://hyper_robot4/meshes/Link3.STL" />
-      </geometry>
-    </collision> -->
   </link>
   <joint
     name="Joint2"
@@ -234,7 +202,7 @@
       upper="1.5707"
       effort="1"
       velocity="1" />
-    <dynamics damping="0.01" friction="0.01"/>
+    <dynamics damping="0.01" friction="0.0"/>
   </joint>
   <link
     name="Link4">
@@ -266,15 +234,6 @@
           rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://hyper_robot4/meshes/Link4.STL" />
-      </geometry>
-    </collision> -->
   </link>
   <joint
     name="Joint3"
@@ -293,7 +252,7 @@
       upper="1.5707"
       effort="1"
       velocity="1" />
-    <dynamics damping="0.01" friction="0.01"/>
+    <dynamics damping="0.01" friction="0.0"/>
   </joint>
   <link
     name="Link5">
@@ -325,15 +284,6 @@
           rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://hyper_robot4/meshes/Link5.STL" />
-      </geometry>
-    </collision> -->
   </link>
   <joint
     name="Joint4"
@@ -352,7 +302,7 @@
       upper="1.5707"
       effort="1"
       velocity="1" />
-    <dynamics damping="0.01" friction="0.01"/>
+    <dynamics damping="0.01" friction="0.0"/>
   </joint>
   <link
     name="Link6">
@@ -384,15 +334,6 @@
           rgba="0.69804 0.69804 0.69804 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://hyper_robot4/meshes/Link6.STL" />
-      </geometry>
-    </collision> -->
   </link>
   <joint
     name="Joint5"
@@ -412,16 +353,6 @@
       effort="1"
       velocity="1" />
   </joint>
-  <!-- <transmission name="joint5_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Joint5">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="joint5_motor">
-      <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-    </actuator>
-  </transmission> -->
   <link name="freedom_roll" />
   <joint
     name="JointPenRoll"
@@ -518,7 +449,7 @@
       upper="0"
       effort="0"
       velocity="0" />
-    <dynamics damping="0.01" friction="0" spring_reference="0" spring_stiffness="1000"/>
+    <dynamics damping="0.001" friction="0" spring_reference="0" spring_stiffness="1000"/>
     <use_parent_model_frame>1</use_parent_model_frame>
   </joint>
   <!-- rotor -->
@@ -890,7 +821,7 @@
             <zero_position_armed>100</zero_position_armed>
             <joint_control_type>velocity</joint_control_type>
           </channel>
-          <channel name='rotor5'>
+          <!-- <channel name='rotor5'>
             <input_index>4</input_index>
             <input_offset>1</input_offset>
             <input_scaling>324.6</input_scaling>
@@ -951,7 +882,7 @@
             <zero_position_disarmed>0</zero_position_disarmed>
             <zero_position_armed>0</zero_position_armed>
             <joint_control_type>position</joint_control_type>
-          </channel>
+          </channel> -->
         </control_channels>
       </plugin>
       <static>0</static>

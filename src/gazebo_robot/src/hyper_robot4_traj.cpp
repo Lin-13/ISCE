@@ -106,7 +106,7 @@ int main(int argc, char * argv[])
     throw std::runtime_error("could not get action server");
   }
   std::cout << "Created action server" << std::endl;
-  while(1){
+  if(1){
     std::vector<std::string> joint_names = {"Joint0","Joint1","Joint2","Joint3","Joint4"};
 
     std::vector<trajectory_msgs::msg::JointTrajectoryPoint> points;
@@ -147,24 +147,31 @@ int main(int argc, char * argv[])
     // points.push_back(point2);
     // points.push_back(point3);
     // points.push_back(point4);
-    trajectory_msgs::msg::JointTrajectoryPoint point_static,point_static1;
+    trajectory_msgs::msg::JointTrajectoryPoint point_static,point_static1,point_static2;
     point_static.time_from_start = rclcpp::Duration::from_seconds(0.0);
     point_static.positions.resize(joint_names.size());
-    point_static.positions[0] = PI/2;
-    point_static.positions[1] = PI/2;
-    point_static.positions[2] = PI/2;
-    point_static.positions[3] = PI/2;
-    point_static.positions[4] = PI/2;
+    point_static.positions[0] = 0;
+    point_static.positions[1] = 0;
+    point_static.positions[2] = 0;
+    point_static.positions[3] = 0;
+    point_static.positions[4] = 0;
     point_static1.time_from_start = rclcpp::Duration::from_seconds(1.0);
     point_static1.positions.resize(joint_names.size());
-    point_static1.positions[0] = PI/2;
+    point_static1.positions[0] = 0;
     point_static1.positions[1] = PI/2;
-    point_static1.positions[2] = PI/2;
-    point_static1.positions[3] = PI/2;
+    point_static1.positions[2] =-PI/2;
+    point_static1.positions[3] = 0;
     point_static1.positions[4] = PI/2;
+    point_static2.time_from_start = rclcpp::Duration::from_seconds(1000.0);
+    point_static2.positions.resize(joint_names.size());
+    point_static2.positions[0] = 0;
+    point_static2.positions[1] = PI/2;
+    point_static2.positions[2] =-PI/2;
+    point_static2.positions[3] = 0;
+    point_static2.positions[4] = PI/2;
     points.push_back(point_static);
     points.push_back(point_static1);
-
+    points.push_back(point_static2);
     rclcpp_action::Client<control_msgs::action::FollowJointTrajectory>::SendGoalOptions opt;
     opt.goal_response_callback = std::bind(common_goal_response, std::placeholders::_1);
     opt.result_callback = std::bind(common_result_response, std::placeholders::_1);
